@@ -5,7 +5,6 @@ class Namechecker:
     def __init__(self, name):
         self.name = name
 
-    
     def printSpecs(self):
         path = f"{getcwd()}/namechecker/public/values.json"
         with open(path) as data:
