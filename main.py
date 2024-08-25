@@ -1,7 +1,8 @@
-from namechecker.namechecker import Namechecker
+from namechecker import *
 
 def main():
-    name = input("Please type your name -> ").strip().lower()
+    print("Personality reveal of your name.\nPlease type your first name -> ", end=' ')
+    name = input().strip().lower().replace(" ", '')
     obj = Namechecker(name)
     obj.printSpecs()
 

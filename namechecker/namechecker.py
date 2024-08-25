@@ -1,6 +1,6 @@
 from json import load
 from os import getcwd
-
+from namechecker.duplicate import RemoveDuplicate
 class Namechecker:
     def __init__(self, name):
         self.name = name
@@ -11,5 +11,8 @@ class Namechecker:
             values = load(data)
             data.close()
             name = self.name
-            for i in name.lower():
+            name = RemoveDuplicate(name).removeDuplicate()
+            print("Your name represents -> ", end=' ')
+            for i in name:
                 print(values[i], end=' ')
+            print('\n')
